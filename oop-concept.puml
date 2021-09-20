@@ -1,0 +1,35 @@
+@startuml
+
+    class User {
+        - name : String
+        - age : Integer
+        - address : String
+
+        .. Simple Setter ..
+        setName(name : String) :void
+        setAge(age : String) : void
+        setAddress(address : String) : void
+        .. Simple Getter ..
+        getName() : String
+        getAge() : String
+        getAddress : String
+    }
+
+    note top of User
+        Ini merupakan kelas user
+    end note
+
+    object user1
+    user1 : name = "Dummy"
+    user1 : age = 20
+    user1 : address = "Jakarta"
+
+    object user2
+    user2 : name="Dummy2"
+    user2 : age = 22
+    user2 : address = "Bogor"
+
+
+User --> user1 : Object
+User --> user2 : Object
+@enduml
